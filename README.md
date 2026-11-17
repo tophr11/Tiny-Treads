@@ -35,7 +35,7 @@ it reaches your base.
 ### Run it
 1. Clone the repo with GitHub Desktop (*File → Clone repository*) or:
    ```bash
-   git clone https://github.com/[your-username]/tiny-treads.git
+   git clone https://github.com/[tophr11]/tiny-treads.git
    ```
 2. [Open the project / run the command]
 
