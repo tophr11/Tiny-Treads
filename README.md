@@ -30,7 +30,7 @@ it reaches your base.
 ## Getting Started
 
 ### Requirements
-- [Engine/language]
+- [Godot 2D/ GDScript]
 
 ### Run it
 1. Clone the repo with GitHub Desktop (*File → Clone repository*) or:
