@@ -70,3 +70,8 @@ tint_progress = Color(0, 1, 0, 1)
 [node name="Control" type="Control" parent="UI/HUD/InfoBar/H" unique_id=516822064]
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/HUD/InfoBar" unique_id=1236755114]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
