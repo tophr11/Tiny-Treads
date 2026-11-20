@@ -22,7 +22,7 @@ it reaches your base.
 - [x] Tilemap
 - [x] Enemy path
 - [ ] Tank movement along the path (not tested yet)
-- [ ] Towers
+- [x] Towers
 - [ ] Wave system
 - [ ] Upgrades
 - [ ] Win/lose conditions

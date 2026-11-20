@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dw6golucswwyg"]
+
+[ext_resource type="PackedScene" uid="uid://pg2svuyfvwae" path="res://map_1.tscn" id="1_hgix8"]
+[ext_resource type="Texture2D" uid="uid://c1dsgdnh541g" path="res://art/home.png" id="2_717br"]
+[ext_resource type="Texture2D" uid="uid://ck5skuwq1736q" path="res://art/hpbartry.jpg" id="3_3s2c2"]
+
+[node name="GameScene" type="Node2D" unique_id=35846598]
+
+[node name="Map1" parent="." unique_id=1902654503 instance=ExtResource("1_hgix8")]
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1578442341]
+
+[node name="HUD" type="Control" parent="UI" unique_id=1517148538]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InfoBar" type="ColorRect" parent="UI/HUD" unique_id=160162238]
+self_modulate = Color(0, 0, 0, 0.47058824)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 1240.0
+offset_bottom = 60.0
+grow_horizontal = 2
+
+[node name="H" type="HBoxContainer" parent="UI/HUD/InfoBar" unique_id=529449419]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Symbol" type="Label" parent="UI/HUD/InfoBar/H" unique_id=1206270253]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "$"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Money" type="Label" parent="UI/HUD/InfoBar/H" unique_id=1925223585]
+custom_minimum_size = Vector2(80, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "100"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="UI/HUD/InfoBar/H" unique_id=196945998]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 10
+texture = ExtResource("2_717br")
+
+[node name="Hp" type="TextureProgressBar" parent="UI/HUD/InfoBar/H" unique_id=1771216455]
+custom_minimum_size = Vector2(400, 30)
+layout_mode = 2
+size_flags_vertical = 4
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_3s2c2")
+texture_progress = ExtResource("3_3s2c2")
+tint_under = Color(0.21568628, 0.21568628, 0.21568628, 1)
+tint_progress = Color(0, 1, 0, 1)
+
+[node name="Control" type="Control" parent="UI/HUD/InfoBar/H" unique_id=516822064]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
