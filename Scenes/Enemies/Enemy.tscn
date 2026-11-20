@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dnkvri1vk3o8f"]
+
+[ext_resource type="Texture2D" uid="uid://cn1b7bo7rdbx6" path="res://Assets/Enemies/tank_green.png" id="1_ucmt6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_v61nq"]
+radius = 25.019993
+
+[node name="Enemy" type="Area2D" unique_id=1260430978]
+position = Vector2(107, 205)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=566082928]
+rotation = -6.2831855
+texture = ExtResource("1_ucmt6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1472200652]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_v61nq")
