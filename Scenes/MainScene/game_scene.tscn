@@ -1,12 +1,17 @@
 [gd_scene format=3 uid="uid://dw6golucswwyg"]
 
 [ext_resource type="PackedScene" uid="uid://pg2svuyfvwae" path="res://map_1.tscn" id="1_hgix8"]
+[ext_resource type="Script" uid="uid://cqs3ag8iw52ii" path="res://Scenes/MainScene/WaveSpawner.gd" id="1_q3m76"]
 [ext_resource type="Texture2D" uid="uid://c1dsgdnh541g" path="res://art/home.png" id="2_717br"]
+[ext_resource type="PackedScene" uid="uid://dx1xo8yfr6wub" path="res://EnemyTank.tscn" id="2_naliy"]
 [ext_resource type="Texture2D" uid="uid://ck5skuwq1736q" path="res://art/hpbartry.jpg" id="3_3s2c2"]
 
 [node name="GameScene" type="Node2D" unique_id=35846598]
+script = ExtResource("1_q3m76")
+tank_scene = ExtResource("2_naliy")
 
 [node name="Map1" parent="." unique_id=1902654503 instance=ExtResource("1_hgix8")]
+position = Vector2(-2, 2)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1578442341]
 
@@ -71,7 +76,48 @@ tint_progress = Color(0, 1, 0, 1)
 custom_minimum_size = Vector2(70, 0)
 layout_mode = 2
 
-[node name="Label" type="Label" parent="UI/HUD/InfoBar" unique_id=1236755114]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="WaveLabel" type="Label" parent="UI/HUD/InfoBar/H" unique_id=2032511253]
+layout_mode = 2
+
+[node name="Waypoints" type="Node2D" parent="." unique_id=2110094263]
+
+[node name="Marker2D" type="Marker2D" parent="Waypoints" unique_id=696345512]
+position = Vector2(18, 155)
+
+[node name="Marker2D2" type="Marker2D" parent="Waypoints" unique_id=1409931582]
+position = Vector2(315, 167)
+
+[node name="Marker2D3" type="Marker2D" parent="Waypoints" unique_id=1424082446]
+position = Vector2(325, 359)
+
+[node name="Marker2D4" type="Marker2D" parent="Waypoints" unique_id=1537345666]
+position = Vector2(524, 359)
+
+[node name="Marker2D5" type="Marker2D" parent="Waypoints" unique_id=1027580151]
+position = Vector2(530, 167)
+
+[node name="Marker2D6" type="Marker2D" parent="Waypoints" unique_id=976574535]
+position = Vector2(1037, 168)
+
+[node name="Marker2D7" type="Marker2D" parent="Waypoints" unique_id=855829989]
+position = Vector2(1036, 436)
+
+[node name="Marker2D8" type="Marker2D" parent="Waypoints" unique_id=1739965494]
+position = Vector2(591, 452)
+
+[node name="Marker2D9" type="Marker2D" parent="Waypoints" unique_id=784411584]
+position = Vector2(592, 639)
+
+[node name="Marker2D10" type="Marker2D" parent="Waypoints" unique_id=1609171143]
+position = Vector2(907, 640)
+
+[node name="Marker2D11" type="Marker2D" parent="Waypoints" unique_id=1796586290]
+position = Vector2(1329, 637)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=167578423]
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=560420602]
+wait_time = 1.2
+one_shot = true
+
+[node name="Projectiles" type="Node2D" parent="." unique_id=243212515]

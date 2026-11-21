@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dx1xo8yfr6wub"]
+
+[ext_resource type="Script" uid="uid://do0smvjfe8857" path="res://EnemyTank.gd" id="1_kti50"]
+[ext_resource type="Texture2D" uid="uid://bpdcbiut2ofdq" path="res://Assets/Enemies/tank_bigRed.png" id="2_8in6l"]
+
+[node name="EnemyTank" type="Node2D" unique_id=75103527]
+script = ExtResource("1_kti50")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=418222188]
+texture = ExtResource("2_8in6l")

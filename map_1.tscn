@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bft23qnv30ae2" path="res://Assets/Environments/Props/treeGreen_large.png" id="5_qukn1"]
 [ext_resource type="PackedScene" uid="uid://d22vuql8n3ljq" path="res://Scenes/Turrets/gun_t_1.tscn" id="6_ud82j"]
 [ext_resource type="PackedScene" uid="uid://cpg6gi0hniyo0" path="res://Scenes/Turrets/gun_t_2.tscn" id="7_1dan6"]
+[ext_resource type="PackedScene" uid="uid://gmq6p0oid5c1" path="res://projectiles.tscn" id="7_2421v"]
 [ext_resource type="PackedScene" uid="uid://c5kgphmovscsf" path="res://Scenes/Turrets/missile_t_1.tscn" id="8_6gr1l"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lolil"]
@@ -1370,9 +1371,12 @@ tile_set = SubResource("TileSet_trpja")
 
 [node name="GunT1" parent="Turrets" unique_id=527222801 instance=ExtResource("6_ud82j")]
 position = Vector2(421, 218)
+projectile_scene = ExtResource("7_2421v")
 
 [node name="GunT2" parent="Turrets" unique_id=780323676 instance=ExtResource("7_1dan6")]
 position = Vector2(962, 296)
+projectile_scene = ExtResource("7_2421v")
 
 [node name="MissileT1" parent="Turrets" unique_id=53305900 instance=ExtResource("8_6gr1l")]
 position = Vector2(660, 558)
+projectile_scene = ExtResource("7_2421v")
